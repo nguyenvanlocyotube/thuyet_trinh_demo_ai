@@ -1,0 +1,54 @@
+[
+  {
+    "id": "notif_v3_release",
+    "title": "🎉 Nâng cấp hệ thống v3.5: Ra mắt Phân quyền Admin Vàng & Bạc!",
+    "content": "Chào mừng bạn đến với bản cập nhật v3.5 mới nhất của AI Video&Text! Ban Quản Trị đã chính thức hoàn thiện hệ thống phân quyền Admin Vàng (Cấp tối cao) và Admin Bạc, nâng cấp bảo mật kiểm soát đa tầng và nhật ký kiểm toán minh bạch.",
+    "type": "update",
+    "badgeText": "MỚI NHẤT",
+    "senderName": "Nguyễn Văn Lộc (Admin Vàng)",
+    "senderEmail": "nguyenlocdz2k7@gmail.com",
+    "senderTier": "gold",
+    "createdAt": "14/10/2026",
+    "createdAtIso": "2026-10-14T02:00:00.000Z",
+    "pinned": true
+  },
+  {
+    "id": "notif_vision_speed",
+    "title": "⚡ Tăng tốc độ phân tích Thị giác AI & OCR Tiếng Việt lên 200%",
+    "content": "Hệ thống AI đa phương thức đã được tối ưu hóa đường truyền API máy chủ tốc độ cao, giúp thời gian phân tích hình ảnh và trích xuất chữ viết tiếng Việt giảm từ 4 giây xuống còn dưới 1.5 giây.",
+    "type": "feature",
+    "badgeText": "TÍNH NĂNG",
+    "senderName": "Ban Quản Trị AI Video&Text",
+    "senderEmail": "admin@aivideo.ai",
+    "senderTier": "gold",
+    "createdAt": "13/10/2026",
+    "createdAtIso": "2026-10-13T10:30:00.000Z",
+    "pinned": false
+  },
+  {
+    "id": "notif_whisper_turbo",
+    "title": "🎙️ Nâng cấp Whisper Turbo: Nhận diện giọng nói siêu chính xác",
+    "content": "Mô hình nhận diện giọng nói đã được huấn luyện tăng cường với hơn 10 giọng vùng miền Việt Nam, hỗ trợ lọc tiếng ồn xung quanh và tự động định dạng đoạn văn bản có dấu chấm câu chuẩn mực.",
+    "type": "feature",
+    "badgeText": "NÂNG CẤP",
+    "senderName": "Ban Quản Trị AI Video&Text",
+    "senderEmail": "admin@aivideo.ai",
+    "senderTier": "gold",
+    "createdAt": "12/10/2026",
+    "createdAtIso": "2026-10-12T08:00:00.000Z",
+    "pinned": false
+  },
+  {
+    "id": "notif_promo_oct",
+    "title": "🎁 Ưu đãi Gói PRO VIP & PROMAX: Giảm 20% khi gia hạn tháng này",
+    "content": "Tri ân cộng đồng người dùng tích cực, toàn bộ các thành viên khi gia hạn gói cước Pro hoặc Promax trong tháng 10 sẽ được tặng kèm thêm 15 ngày trải nghiệm và ưu tiên đường truyền VIP không giới hạn.",
+    "type": "promo",
+    "badgeText": "ƯU ĐÃI",
+    "senderName": "Admin Bạc (Giám Sát)",
+    "senderEmail": "admin@gmail.com",
+    "senderTier": "silver",
+    "createdAt": "11/10/2026",
+    "createdAtIso": "2026-10-11T14:15:00.000Z",
+    "pinned": false
+  }
+]

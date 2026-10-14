@@ -1,0 +1,40 @@
+[
+  {
+    "id": "log_init_001",
+    "actorId": "usr_admin_gmail",
+    "actorEmail": "admin@gmail.com",
+    "actorName": "Admin Bạc (Giám Sát)",
+    "actorTier": "silver",
+    "actionType": "renew_subscription",
+    "actionTitle": "Gia hạn gói cước thành viên",
+    "targetId": "usr_member_004",
+    "targetEmail": "hoangnam.ai@gmail.com",
+    "targetName": "Hoàng Nam",
+    "description": "Admin Bạc (admin@gmail.com) đã gia hạn gói GO thêm 30 ngày cho thành viên Hoàng Nam (hoangnam.ai@gmail.com) đến ngày 11/11/2026.",
+    "changes": {
+      "before": { "plan": "go", "expiresAt": "2026-10-12" },
+      "after": { "plan": "go", "expiresAt": "2026-11-11", "additionalDays": 30 }
+    },
+    "timestamp": "09:30:15 13/10/2026",
+    "createdAtIso": "2026-10-13T02:30:15.000Z"
+  },
+  {
+    "id": "log_init_002",
+    "actorId": "usr_admin_gmail",
+    "actorEmail": "admin@gmail.com",
+    "actorName": "Admin Bạc (Giám Sát)",
+    "actorTier": "silver",
+    "actionType": "edit_user",
+    "actionTitle": "Chỉnh sửa ghi chú người dùng",
+    "targetId": "usr_demo_002",
+    "targetEmail": "demo.user@aivideo.ai",
+    "targetName": "Tài khoản Demo",
+    "description": "Admin Bạc (admin@gmail.com) đã cập nhật ghi chú nội bộ cho tài khoản Demo: 'Khách hàng liên hệ hỏi báo giá doanh nghiệp'.",
+    "changes": {
+      "before": { "notes": "Tài khoản dùng thử tính năng" },
+      "after": { "notes": "Khách hàng liên hệ hỏi báo giá doanh nghiệp" }
+    },
+    "timestamp": "14:15:20 13/10/2026",
+    "createdAtIso": "2026-10-13T07:15:20.000Z"
+  }
+]

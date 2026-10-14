@@ -1,0 +1,62 @@
+[
+  {
+    "id": "free",
+    "name": "Free",
+    "price": 0,
+    "tagline": "Cho người mới bắt đầu trải nghiệm",
+    "features": [
+      "1 lượt trải nghiệm AI miễn phí",
+      "Thị giác AI phân tích & OCR tiếng Việt",
+      "Phiên âm giọng nói bằng Whisper Turbo",
+      "Lưu kết quả tạm thời"
+    ],
+    "isFree": true,
+    "durationDays": 30,
+    "createdAt": "01/09/2026"
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "price": 49000,
+    "tagline": "Cho nhu cầu cá nhân cơ bản hàng tháng",
+    "features": [
+      "100 ảnh phân tích / tháng",
+      "30 phút ghi âm chuyển văn bản / tháng",
+      "Lưu lịch sử đám mây 30 ngày",
+      "Hỗ trợ qua Telegram & Email 24/7"
+    ],
+    "durationDays": 30,
+    "createdAt": "01/09/2026"
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "price": 149000,
+    "tagline": "Cho nhà sáng tạo & người dùng thường xuyên",
+    "popular": true,
+    "features": [
+      "1.000 ảnh phân tích / tháng",
+      "300 phút ghi âm Whisper / tháng",
+      "Xử lý nhiều ảnh song song",
+      "Lưu lịch sử không giới hạn",
+      "Ưu tiên hàng đợi AI tốc độ cao"
+    ],
+    "durationDays": 30,
+    "createdAt": "01/09/2026"
+  },
+  {
+    "id": "promax",
+    "name": "Promax",
+    "price": 399000,
+    "tagline": "Cho đội nhóm & doanh nghiệp",
+    "features": [
+      "Không giới hạn ảnh & ghi âm",
+      "Truy cập API riêng cho doanh nghiệp",
+      "Băng thông & bộ nhớ tối đa",
+      "Hỗ trợ ưu tiên 24/7 trực tiếp",
+      "Xuất báo cáo & dữ liệu CSV / JSON"
+    ],
+    "durationDays": 30,
+    "createdAt": "01/09/2026"
+  }
+]

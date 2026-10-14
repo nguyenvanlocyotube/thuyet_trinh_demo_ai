@@ -1,0 +1,71 @@
+# ==============================================================================
+# Google Cloud Build Pipeline for AI Vision & Speech Studio
+# Builds Docker image and deploys to Google Cloud Run (24/7 Always-On Mode)
+# ==============================================================================
+
+steps:
+  # 1. Build Docker image with commit SHA and latest tags
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/ai-pricing-platform:$COMMIT_SHA'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/ai-pricing-platform:latest'
+      - '.'
+    id: 'build-image'
+
+  # 2. Push Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/ai-pricing-platform:$COMMIT_SHA'
+    id: 'push-sha-image'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/ai-pricing-platform:latest'
+    id: 'push-latest-image'
+
+  # 3. Deploy container image to Google Cloud Run (Always-On 24/7)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'ai-pricing-platform'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/ai-pricing-platform:$COMMIT_SHA'
+      - '--region'
+      - '${_REGION}'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+      - '--memory'
+      - '1Gi'
+      - '--cpu'
+      - '1'
+      # Chế độ chạy liên tục 24/24 (Always-On, không bao giờ ngủ, zero cold start):
+      - '--min-instances'
+      - '1'
+      - '--max-instances'
+      - '10'
+      # Duy trì CPU 100% liên tục 24/7 để xử lý ngầm và đồng bộ thời gian thực:
+      - '--no-cpu-throttling'
+      - '--set-env-vars'
+      - 'NODE_ENV=production'
+    id: 'deploy-cloud-run'
+
+# Default substitutions (can be overridden via --substitutions=_REGION=asia-southeast1)
+substitutions:
+  _REGION: 'asia-southeast1' # Singapore datacenter (tốc độ cao và tối ưu cho Việt Nam)
+
+images:
+  - 'gcr.io/$PROJECT_ID/ai-pricing-platform:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/ai-pricing-platform:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
